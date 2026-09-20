@@ -1,6 +1,6 @@
 # 초키보드 iCloud MCP 서버 · Chalkieboard iCloud MCP
 
-**English.** A local MCP server for [Chalkieboard](https://github.com/207studio/chalkieboard-icloud-mcp), an iPad whiteboard app for elementary teachers.
+**English.** A local MCP server for [Chalkieboard](https://github.com/chalkieboard/chalkieboard-icloud-mcp), an iPad whiteboard app for elementary teachers.
 The app mirrors every subject as a folder in iCloud Drive with a machine-readable `structure.json`. This server gives Claude (or any MCP client)
 eight tools over that folder: list subjects, lessons and files; add a material (placed on a lesson automatically by filename); read text files;
 append a lesson plan the app imports; create a subject folder. It never deletes and never touches the app's own database — the app only
@@ -43,7 +43,7 @@ Zero dependencies, Node 18+. Try it without the app using the [sample folder](sa
 ### Claude Code
 
 ```bash
-claude mcp add --scope user chalkieboard -- node "/Users/jang-yuil/판서어플/tools/mcp/chalkieboard-mcp.mjs"
+claude mcp add --scope user chalkieboard -- node "/path/to/chalkieboard-icloud-mcp/chalkieboard-mcp.mjs"
 ```
 
 ### Claude Desktop — 설정 파일로(번들 대신)
@@ -55,7 +55,7 @@ claude mcp add --scope user chalkieboard -- node "/Users/jang-yuil/판서어플/
   "mcpServers": {
     "chalkieboard": {
       "command": "node",
-      "args": ["/Users/jang-yuil/판서어플/tools/mcp/chalkieboard-mcp.mjs"]
+      "args": ["/path/to/chalkieboard-icloud-mcp/chalkieboard-mcp.mjs"]
     }
   }
 }
@@ -87,7 +87,7 @@ node tools/mcp/selftest.mjs
 | 어디 | 누가 싣나 | 준비물 |
 |---|---|---|
 | 클로드 데스크톱 "확장 찾아보기" | Anthropic 심사(구글 폼 제출) | [디렉터리_제출_초안.md](디렉터리_제출_초안.md) — 아이콘·연락처는 됐고, 공개 저장소·견본 폴더·개인정보 정책 페이지가 남았다 |
-| 공개 MCP 레지스트리 | ✅ 올라가 있음 — `io.github.207studio/chalkieboard-icloud-mcp` | 공개 저장소 <https://github.com/207studio/chalkieboard-icloud-mcp>에 태그 `v<버전>`을 밀면 `release.yml`이 번들·릴리스·발행(OIDC) |
+| 공개 MCP 레지스트리 | ✅ 올라가 있음 — `io.github.207studio/chalkieboard-icloud-mcp` | 공개 저장소 <https://github.com/chalkieboard/chalkieboard-icloud-mcp>에 태그 `v<버전>`을 밀면 `release.yml`이 번들·릴리스·발행(OIDC) |
 
 아이콘은 앱 아이콘 512px(`icon.png`)이 번들 manifest의 `icon`·`icons`로 들어간다.
 

@@ -1,6 +1,6 @@
 # Privacy Policy — Chalkieboard iCloud MCP / 개인정보 처리방침 — 초키보드 iCloud MCP
 
-Last updated: 2026-09-07 · Contact: only1mui@icloud.com
+Last updated: 2026-09-20 · Contact: chalkieboard@icloud.com
 
 ## English
 
